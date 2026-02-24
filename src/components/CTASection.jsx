@@ -94,7 +94,7 @@ export default function CTASection() {
             <span style={{ color: 'var(--text)', fontWeight: 700 }}>No account required.</span>
           </p>
           <div className="md-flex-col md-gap-4" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
-            <button
+            <a
               ref={btn1Ref}
               href="https://github.com/doctorbhh/ragam_/releases/download/v1.0.0-beta/Ragam_Beta.apk"
               className="neo-brutal-shadow bg-neon-gradient md-w-full md-justify-center"
@@ -128,7 +128,7 @@ export default function CTASection() {
             >
               <span className="material-icons">android</span>
               Download for Android
-            </button>
+            </a>
             <a
               ref={btn2Ref}
               href="https://github.com/doctorbhh/ragam-window/releases/download/v1.0.1/RAGAM-1.0.1-setup.exe"
