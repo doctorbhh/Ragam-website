@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+/* ── Utilities for Neon Theme ── */
+.bg-neon-gradient {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--magenta) 100%);
+}
+.bg-neon-gradient:hover {
+  background: linear-gradient(90deg, #33f3ff 0%, #ff33ff 100%);
+}
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--magenta) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.shadow-neon-cyan {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+.shadow-neon-magenta {
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
+}
+.grid-line {
+  background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.grid-line-glow {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.border-gradient-bottom {
+  border-bottom-width: 4px;
+  border-image: linear-gradient(to right, var(--primary), var(--magenta)) 1;
+}
+
+/* ── Animations ── */
+@keyframes bounce-vertical {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(10px); opacity: 0.8; }
+}
+.discovery-hint {
+  animation: bounce-vertical 2s infinite;
+}
+
+/* ── Default Global ── */
+:root {
+  cursor: none; 
+  font-family: 'Space Grotesk', sans-serif;
+
+  /* Cyberpunk Variables */
+  --primary: #00f0ff; 
+  --magenta: #ff00ff;
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-dark-accent: #1a1a1a;
+  --text: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border: #ffffff;
+  --border-subtle: rgba(255, 255, 255, 0.2);
+  --border-faint: rgba(255, 255, 255, 0.05);
+  --ghost: rgba(255, 255, 255, 0.03);
+  --shadow-color: rgba(255, 255, 255, 1);
+  --shadow-color-alt: rgba(0, 0, 0, 1);
+  --nav-bg: rgba(10, 10, 10, 0.9);
+  --nav-bg-scrolled: rgba(10, 10, 10, 0.95);
+  --card-bg: #0a0a0a;
+  --eq-bar: #00f0ff;
+  --album-overlay: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #00f0ff;
+  --footer-bg: #0a0a0a;
+  --footer-text: #ffffff;
+  --footer-muted: #71717a;
+  --footer-border: #27272a;
+  --footer-badge-bg: #1a1a1a;
+  --footer-badge-border: #3f3f46;
+  --specs-dark-bg: #111111;
+  --specs-dark-text: #00f0ff;
+  --cta-btn1-bg: #ffffff;
+  --cta-btn1-text: #000000;
+  --cta-btn2-bg: #0a0a0a;
+  --cta-btn2-text: #ffffff;
+  --right-panel-bg: var(--primary);
+  --cursor-border: #ffffff;
+  --cursor-blend: normal;
+}
+
+/* Force dark mode styling globally to match the theme entirely, overriding specific data-theme if needed */
+[data-theme="dark"] {
+  --primary: #00f0ff;
+  --magenta: #ff00ff;
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-dark-accent: #1a1a1a;
+  --text: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border: #ffffff;
+  --border-subtle: rgba(255, 255, 255, 0.2);
+  --border-faint: rgba(255, 255, 255, 0.05);
+  --ghost: rgba(255, 255, 255, 0.03);
+  --shadow-color: rgba(255, 255, 255, 1);
+  --shadow-color-alt: rgba(0, 0, 0, 1);
+  --nav-bg: rgba(10, 10, 10, 0.9);
+  --nav-bg-scrolled: rgba(10, 10, 10, 0.95);
+  --card-bg: #0a0a0a;
+  --eq-bar: #00f0ff;
+  --album-overlay: rgba(0, 0, 0, 0.4);
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #00f0ff;
+  --footer-bg: #0a0a0a;
+  --footer-text: #ffffff;
+  --footer-muted: #71717a;
+  --footer-border: #27272a;
+  --footer-badge-bg: #1a1a1a;
+  --footer-badge-border: #3f3f46;
+  --specs-dark-bg: #111111;
+  --specs-dark-text: #00f0ff;
+  --cta-btn1-bg: #ffffff;
+  --cta-btn1-text: #000000;
+  --cta-btn2-bg: #0a0a0a;
+  --cta-btn2-text: #ffffff;
+  --right-panel-bg: var(--primary);
+  --cursor-border: #ffffff;
+  --cursor-blend: normal;
+
+  /* Theme-specific shadows and overlays */
+  --ghost-text-color: rgba(255, 255, 255, 0.05);
+  --ghost-text-shadow: 0 0 100px rgba(0, 240, 255, 0.1);
+  --hero-card-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  --hero-text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  --iso-top-bg: #1a1a1a;
+  --iso-mid-bg: #111111;
+  --iso-bot-bg: #0a0a0a;
+  --iso-bot-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --primary: #00f0ff;
+  --magenta: #ff00ff;
+  --bg: #f4f4f5;
+  --bg-secondary: #e4e4e7;
+  --bg-dark-accent: #d4d4d8;
+  --text: #000000;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
+  --border: #000000;
+  --border-subtle: rgba(0, 0, 0, 0.2);
+  --border-faint: rgba(0, 0, 0, 0.05);
+  --ghost: rgba(0, 0, 0, 0.03);
+  --shadow-color: rgba(0, 0, 0, 1);
+  --shadow-color-alt: rgba(255, 255, 255, 1);
+  --nav-bg: rgba(244, 244, 245, 0.9);
+  --nav-bg-scrolled: rgba(244, 244, 245, 0.95);
+  --card-bg: #ffffff;
+  --eq-bar: #000000;
+  --album-overlay: rgba(255, 255, 255, 0.4);
+  --scrollbar-track: #f4f4f5;
+  --scrollbar-thumb: #000000;
+  --footer-bg: #ffffff;
+  --footer-text: #000000;
+  --footer-muted: #71717a;
+  --footer-border: #e4e4e7;
+  --footer-badge-bg: #f4f4f5;
+  --footer-badge-border: #d4d4d8;
+  --specs-dark-bg: #e4e4e7;
+  --specs-dark-text: #000000;
+  --cta-btn1-bg: #000000;
+  --cta-btn1-text: #ffffff;
+  --cta-btn2-bg: #ffffff;
+  --cta-btn2-text: #000000;
+  --right-panel-bg: var(--primary);
+  --cursor-border: #000000;
+  --cursor-blend: normal;
+
+  /* Theme-specific shadows and overlays */
+  --ghost-text-color: rgba(0, 0, 0, 0.03);
+  --ghost-text-shadow: 0 0 100px rgba(0, 0, 0, 0.05);
+  --hero-card-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  --hero-text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  --iso-top-bg: #ffffff;
+  --iso-mid-bg: #ffffff;
+  --iso-bot-bg: #ffffff;
+  --iso-bot-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important; /* Enforce no default cursor everywhere */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ── Neo-Brutalist Utilities ── */
+.neo-brutal-shadow {
+  box-shadow: 6px 6px 0px 0px var(--shadow-color);
+}
+.neo-brutal-shadow-lg {
+  box-shadow: 12px 12px 0px 0px var(--shadow-color);
+}
+.neo-brutal-shadow-alt {
+  box-shadow: 6px 6px 0px 0px var(--shadow-color-alt);
+}
+
+/* ── Grid Dot Pattern ── */
+.grid-line {
+  background-image: radial-gradient(var(--border-subtle) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Ghost Text ── */
+.ghost-text {
+  color: var(--ghost);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Discovery Hint Bounce ── */
+.discovery-hint {
+  animation: bounce-vertical 2s infinite;
+}
+
+@keyframes bounce-vertical {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.8;
+  }
+}
+
+/* ── Smooth Reveal ── */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-element.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 2px solid var(--scrollbar-track);
+}
+
+/* ── Interactive Elements ── */
+a, button, [role="button"], input, select, textarea {
+  cursor: none !important; /* Override default pointers */
+}
+
+/* ── Magnetic button hover effect class ── */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.magnetic-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px var(--shadow-color);
+}
+.magnetic-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px 0px var(--shadow-color);
+}
+
+/* ── Isometric transform ── */
+.isometric-layer {
+  transform: rotateX(51deg) rotateZ(43deg);
+}
+
+/* ── Section transitions ── */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Material Icons inline fix ── */
+.material-icons,
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ── Theme toggle button ── */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*   cursor: pointer; REMOVED to avoid override */
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+.theme-toggle:hover {
+  background: var(--primary);
+  color: #000;
+}
