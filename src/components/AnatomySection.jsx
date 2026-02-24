@@ -380,7 +380,7 @@ export default function AnatomySection() {
               video_library
             </span>
             <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              YouTube Text/Video
+              YouTube
             </span>
             <span style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-secondary)', marginTop: '4px' }}>
               Fallback Library

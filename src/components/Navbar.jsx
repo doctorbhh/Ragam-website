@@ -83,7 +83,7 @@ export default function Navbar() {
           onMouseEnter={(e) => (e.target.style.color = 'var(--primary)')}
           onMouseLeave={(e) => (e.target.style.color = 'var(--text)')}
         >
-          Journey
+          Engine
         </a>
         <a
           onClick={() => scrollToSection('specs')}
@@ -100,7 +100,7 @@ export default function Navbar() {
           onMouseEnter={(e) => (e.target.style.color = 'var(--magenta)')}
           onMouseLeave={(e) => (e.target.style.color = 'var(--text)')}
         >
-          Nodes
+          Features
         </a>
 
         {/* Theme toggle */}
