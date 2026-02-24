@@ -101,6 +101,7 @@ export default function CTASection() {
               style={{
                 color: '#000',
                 padding: '20px 40px',
+                textDecoration: 'none',
                 fontSize: '1.25rem',
                 fontWeight: 700,
                 textTransform: 'uppercase',
