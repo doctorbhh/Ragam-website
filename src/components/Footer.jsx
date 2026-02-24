@@ -36,6 +36,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
+      className="md-p-8"
       style={{
         backgroundColor: 'var(--footer-bg)',
         color: 'var(--footer-text)',
@@ -45,18 +46,18 @@ export default function Footer() {
         borderTop: '3px solid var(--border-subtle)',
       }}
     >
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '48px' }}>
+      <div className="md-flex-col" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '48px' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
             <img src="/icon.png" alt="Ragam Logo" style={{ width: 40, height: 40, objectFit: 'contain' }} />
-            <span style={{ fontSize: '2.5rem', fontWeight: 700, letterSpacing: '-0.05em', textTransform: 'uppercase' }}>Ragam</span>
+            <span className="md-text-3xl" style={{ fontSize: '2.5rem', fontWeight: 700, letterSpacing: '-0.05em', textTransform: 'uppercase' }}>Ragam</span>
           </div>
           <p style={{ color: 'var(--footer-muted)', fontWeight: 500, fontSize: '1.25rem', maxWidth: '20rem' }}>
             Sound architecture for the curious explorer.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '96px' }}>
+        <div className="md-grid-1 md-gap-8" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '96px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             <span style={{
               textTransform: 'uppercase', fontWeight: 700, color: 'var(--primary)',
@@ -76,7 +77,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{
+      <div className="md-flex-col md-mt-8" style={{
         marginTop: '128px', paddingTop: '48px', borderTop: '1px solid var(--footer-border)',
         display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '24px',
         fontSize: '0.875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.3em',

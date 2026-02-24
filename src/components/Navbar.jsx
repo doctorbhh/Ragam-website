@@ -54,6 +54,7 @@ export default function Navbar() {
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
         <img src="/icon.png" alt="Ragam Logo" style={{ width: 40, height: 40, objectFit: 'contain' }} />
         <span
+          className="md-hide"
           style={{
             fontSize: '1.5rem',
             fontWeight: 700,
@@ -66,7 +67,7 @@ export default function Navbar() {
         </span>
       </Link>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+      <div className="md-gap-4" style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
         <a
           onClick={() => scrollToSection('anatomy')}
           style={{
@@ -115,7 +116,7 @@ export default function Navbar() {
 
         <a
           onClick={() => scrollToSection('cta')}
-          className="neo-brutal-shadow-alt magnetic-btn bg-neon-gradient"
+          className="neo-brutal-shadow-alt magnetic-btn bg-neon-gradient md-text-sm md-p-4"
           style={{
             border: '2px solid var(--border)',
             padding: '8px 24px',

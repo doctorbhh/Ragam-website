@@ -33,7 +33,7 @@ export default function CTASection() {
     <section
       id="cta"
       ref={sectionRef}
-      className="grid-line-glow"
+      className="grid-line-glow md-p-8 md-pt-24 md-pb-24"
       style={{
         padding: '192px 24px',
         display: 'flex',
@@ -47,7 +47,7 @@ export default function CTASection() {
     >
       <div
         ref={cardRef}
-        className="neo-brutal-shadow-lg"
+        className="neo-brutal-shadow-lg md-p-8"
         style={{
           maxWidth: '64rem',
           width: '100%',
@@ -93,10 +93,11 @@ export default function CTASection() {
             <br />
             <span style={{ color: 'var(--text)', fontWeight: 700 }}>No account required.</span>
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
+          <div className="md-flex-col md-gap-4" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
             <button
               ref={btn1Ref}
-              className="neo-brutal-shadow bg-neon-gradient"
+              href="https://github.com/doctorbhh/ragam_/releases/download/v1.0.0-beta/Ragam_Beta.apk"
+              className="neo-brutal-shadow bg-neon-gradient md-w-full md-justify-center"
               style={{
                 color: '#000',
                 padding: '20px 40px',
@@ -128,12 +129,14 @@ export default function CTASection() {
               <span className="material-icons">android</span>
               Download for Android
             </button>
-            <button
+            <a
               ref={btn2Ref}
-              className="neo-brutal-shadow"
+              href="https://github.com/doctorbhh/ragam-window/releases/download/v1.0.1/RAGAM-1.0.1-setup.exe"
+              className="neo-brutal-shadow md-w-full md-justify-center"
               style={{
                 backgroundColor: 'transparent',
                 color: 'var(--text)',
+                textDecoration: 'none',
                 padding: '20px 40px',
                 fontSize: '1.25rem',
                 fontWeight: 700,
@@ -159,7 +162,7 @@ export default function CTASection() {
             >
               <span className="material-symbols-outlined">desktop_windows</span>
               Download for Windows
-            </button>
+            </a>
           </div>
         </div>
       </div>

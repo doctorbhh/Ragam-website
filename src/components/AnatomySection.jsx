@@ -136,7 +136,7 @@ export default function AnatomySection() {
       {/* ── LEFT SIDE IMAGE (Desktop Frame) ── */}
       <div
         ref={leftImgRef}
-        className="neo-brutal-shadow"
+        className="neo-brutal-shadow md-hide"
         style={{
           position: 'absolute',
           left: '80px',
@@ -189,7 +189,7 @@ export default function AnatomySection() {
       {/* ── RIGHT SIDE IMAGE (Desktop Frame) ── */}
       <div
         ref={rightImgRef}
-        className="neo-brutal-shadow"
+        className="neo-brutal-shadow md-hide"
         style={{
           position: 'absolute',
           right: '24px',
@@ -252,7 +252,7 @@ export default function AnatomySection() {
         {/* Card 01 - Multi-Source Engine */}
         <div
           ref={card1Ref}
-          className="neo-brutal-shadow"
+          className="neo-brutal-shadow md-p-8"
           style={{
             maxWidth: '30rem',
             marginLeft: 'auto',
@@ -266,6 +266,7 @@ export default function AnatomySection() {
           }}
         >
           <h3
+            className="md-text-xl"
             style={{
               fontSize: '1.875rem',
               fontWeight: 700,
@@ -276,7 +277,7 @@ export default function AnatomySection() {
           >
             01. Multi-Source Engine
           </h3>
-          <p style={{ fontSize: '1rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+          <p className="md-text-sm" style={{ fontSize: '1rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
             Unlike Spotify which relies on its own catalog, Ragam aggregates YouTube Music, YouTube, and JioSaavn.
             If a song is missing or low quality on one platform, Ragam finds it elsewhere — automatically.
           </p>
@@ -390,7 +391,7 @@ export default function AnatomySection() {
         {/* Card 02 - The Advantage */}
         <div
           ref={card2Ref}
-          className="neo-brutal-shadow-alt"
+          className="neo-brutal-shadow-alt md-p-8"
           style={{
             maxWidth: '30rem',
             marginRight: 'auto',
@@ -404,6 +405,7 @@ export default function AnatomySection() {
           }}
         >
           <h3
+            className="md-text-xl"
             style={{
               fontSize: '1.875rem',
               fontWeight: 700,
@@ -414,7 +416,7 @@ export default function AnatomySection() {
           >
             02. The Hybrid Advantage
           </h3>
-          <p style={{ fontSize: '1rem', lineHeight: 1.6, color: 'rgba(0,0,0,0.8)' }}>
+          <p className="md-text-sm" style={{ fontSize: '1rem', lineHeight: 1.6, color: 'rgba(0,0,0,0.8)' }}>
             Three sources. One unified stream. Every song finds its best quality match automatically —
             no gaps, no compromises, no missing tracks.
           </p>
@@ -423,6 +425,7 @@ export default function AnatomySection() {
 
       {/* Side arrows */}
       <div
+        className="md-hide"
         style={{
           position: 'absolute',
           right: '40px',

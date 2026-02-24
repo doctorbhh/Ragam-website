@@ -115,9 +115,10 @@ export default function HeroSection() {
       </div>
 
       {/* Main content */}
-      <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', padding: '0 24px', width: '100%' }}>
+      <div className="md-p-4" style={{ position: 'relative', zIndex: 10, textAlign: 'center', padding: '0 24px', width: '100%' }}>
         <h1
           ref={headlineRef}
+          className="md-text-4xl"
           style={{
             fontSize: 'clamp(3rem, 9vw, 8rem)',
             fontWeight: 700,
@@ -135,7 +136,7 @@ export default function HeroSection() {
             Music
           </span>
           <span
-            className="bg-neon-gradient"
+            className="bg-neon-gradient md-p-4"
             style={{
               padding: '8px 40px',
               border: '3px solid var(--border)',
@@ -151,7 +152,7 @@ export default function HeroSection() {
 
         <div
           ref={cardRef}
-          className="neo-brutal-shadow-lg"
+          className="neo-brutal-shadow-lg md-p-4 md-mt-8"
           style={{
             marginTop: '64px',
             maxWidth: '38rem',
@@ -169,7 +170,7 @@ export default function HeroSection() {
           <div style={{ position: 'absolute', top: '12px', right: '12px', opacity: 0.3, color: 'var(--text)' }}>
             <span className="material-symbols-outlined">south_east</span>
           </div>
-          <p style={{ fontSize: '1.2rem', fontWeight: 500, lineHeight: 1.6, color: '#d4d4d8' }}>
+          <p className="md-text-sm" style={{ fontSize: '1.2rem', fontWeight: 500, lineHeight: 1.6, color: '#d4d4d8' }}>
             The entire music internet, combined. Stream from YouTube Music, YouTube, or JioSaavn instantly.
             No ads. No subscription. Real downloads. Premium quality — free forever.
           </p>

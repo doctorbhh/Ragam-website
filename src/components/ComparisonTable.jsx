@@ -54,6 +54,7 @@ export default function ComparisonTable() {
     >
       <div style={{ maxWidth: '1000px', width: '100%' }}>
         <h2
+          className="md-text-4xl md-mb-8"
           style={{
             fontSize: 'clamp(2.5rem, 6vw, 4rem)',
             fontWeight: 700,
@@ -67,7 +68,8 @@ export default function ComparisonTable() {
           Why Switch?
         </h2>
 
-        <div className="neo-brutal-shadow-lg" style={{ border: '3px solid var(--border)', backgroundColor: 'var(--card-bg)' }}>
+        <div style={{ overflowX: 'auto', width: '100%' }}>
+          <div className="neo-brutal-shadow-lg" style={{ minWidth: '600px', border: '3px solid var(--border)', backgroundColor: 'var(--card-bg)' }}>
           {/* Header */}
           <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', borderBottom: '3px solid var(--border)', backgroundColor: 'var(--bg-secondary)' }}>
             <div style={{ padding: '24px', fontWeight: 700, fontSize: '1.25rem', color: 'var(--text)' }}>FEATURE</div>
@@ -107,6 +109,7 @@ export default function ComparisonTable() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

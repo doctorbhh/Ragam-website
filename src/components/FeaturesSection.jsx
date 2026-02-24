@@ -37,6 +37,7 @@ export default function FeaturesSection() {
     <section
       id="features"
       ref={sectionRef}
+      className="md-grid-1"
       style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
@@ -48,7 +49,7 @@ export default function FeaturesSection() {
       {/* TRUE DOWNLOADS - Left */}
       <div
         ref={leftRef}
-        className="group"
+        className="group md-p-8"
         style={{
           backgroundColor: 'var(--bg)',
           padding: '64px',
@@ -65,7 +66,7 @@ export default function FeaturesSection() {
           <span className="material-symbols-outlined" style={{ fontSize: '30rem', color: 'var(--primary)', transition: 'transform 1s', transform: 'scale(1)' }}>download</span>
         </div>
         <div style={{ position: 'relative' }}>
-          <h2 style={{
+          <h2 className="md-text-4xl" style={{
             fontSize: 'clamp(2.5rem, 7vw, 7rem)',
             fontWeight: 700,
             textTransform: 'uppercase',
@@ -114,7 +115,7 @@ export default function FeaturesSection() {
       {/* AD-FREE 320kbps - Right */}
       <div
         ref={rightRef}
-        className="group"
+        className="group md-p-8"
         style={{
           backgroundColor: 'var(--bg-secondary)',
           padding: '64px',
@@ -131,7 +132,7 @@ export default function FeaturesSection() {
           <span className="material-symbols-outlined" style={{ fontSize: '30rem', color: 'var(--magenta)', transition: 'transform 1s', transform: 'scale(1)' }}>headphones</span>
         </div>
         <div style={{ position: 'relative', textAlign: 'right' }}>
-          <h2 style={{
+          <h2 className="md-text-4xl" style={{
             fontSize: 'clamp(2.5rem, 7vw, 7rem)',
             fontWeight: 700,
             textTransform: 'uppercase',

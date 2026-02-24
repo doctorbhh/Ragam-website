@@ -77,7 +77,7 @@ export default function SpecsSection() {
         justifyContent: 'center',
       }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', height: '100%', minHeight: '100vh' }}>
+      <div className="md-grid-1" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', height: '100%', minHeight: '100vh' }}>
         {specs.map((spec, i) => {
           const accentColor = i % 2 === 0 ? 'var(--primary)' : 'var(--magenta)';
           const bgColor = i % 2 === 0 ? 'var(--bg)' : 'var(--bg-dark-accent)';
@@ -150,7 +150,7 @@ export default function SpecsSection() {
                 >
                   {spec.num}.
                 </div>
-                <h3 style={{ fontSize: '2.5rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '24px', letterSpacing: '-0.02em' }}>
+                <h3 className="md-text-3xl" style={{ fontSize: '2.5rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '24px', letterSpacing: '-0.02em' }}>
                   {spec.title}
                 </h3>
                 <p style={{ fontSize: '1.125rem', fontWeight: 500, lineHeight: 1.6, opacity: 0.8 }}>
